@@ -1,0 +1,12 @@
+--list-formats：这是一个列清单参数，执行后并不会下载视频，但能知道这个目标视频都有哪些格式存在，这样就可以有选择的下载啦！
+
+youtube-dl --list-formats https://www.youtube.com/watch?v=hLQl3WQQoQ0
+
+-f + 编号：通过上一步获取到了所有视频格式的清单，最左边一列就是编号对应着不同的格式，例如我想下载22号那个mp4格式分辨率为1280*720的视频，则按下面的命令就可以轻松指定下载视频哦；
+
+youtube-dl -f 22 http://www.youtube.com/watch?v=BlXaGWbFVKY
+
+
+不过不是全局代理格式添加上：
+--proxy "https://127.0.0.1:1080"
+例如：youtube-dl --proxy "https://127.0.0.1:1080" --list-formats https://www.youtube.com/watch?v=JxMAolDyqu4&t=89s
